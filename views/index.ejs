@@ -1,170 +1,146 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
-    <!-- Link to CSS file and Google Fonts-->
-    <link rel="stylesheet" href="styles/site.css">
-    <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700" rel="stylesheet" />
-    
-</head>
-<body>
+<!-- Header section -->
+<%- include('_header.ejs') %>
 
-    <!-- Header section -->
-    <header>
-        <h2>
-            <a href="/">Pets-R-Us</a>
-        </h2>
-        <!-- navbar -->
-        <nav class="nav-container">
-            <div class="nav-drop-down">
-                <span>Services</span>
-                <!-- navbar drop-down-menu content -->
-                <div class="nav-drop-down-content">
-                    <li>
-                        <a href="#">Boarding</a>
-                    </li>
-                    <li>
-                        <a href="/grooming">Grooming</a>
-                    </li>
-                    <li>
-                        <a href="#">Training</a>
-                    </li>
-                </div>
-            </div>
-            <li>
-                <a href="#">Customers</a>
-            </li>
-            <li>
-                <a href="#">Booking</a>
-            </li>
-            <li>
-                <a href="#">My Appointments</a>
-            </li>
-        </nav>
-    </header>
-    <!-- Overview Section -->
-    <section class="overview">
-        <div class="background-image"></div>
-        <div class="overview-content">
-            <h1 class="overview-title">
-                Pets-R-Us
-            </h1>
-            <h3 class="overview-info">
-                Where Your Pets Feel Right at Home
-            </h3>
-            <a href="#" class="btn btn-primary">
-                Sign up for a free account
-            </a>
+<!-- Overview Section -->
+<section class="overview">
+  <div class="background-image"></div>
+  <div class="overview-content">
+    <h1 class="overview-title">Pets-R-Us</h1>
+    <h3 class="overview-info">Where Your Pets Feel Right at Home</h3>
+    <a href="#" class="btn btn-primary"> Sign up for a free account </a>
+  </div>
+</section>
+
+<!-- locations section -->
+<section class="locations">
+  <h3 class="locations-title">Store Locations</h3>
+  <p class="locations-statement">
+    Embarking on our journey in the heart of pet care, Pets-R-Us started as a
+    humble venture with a vision to redefine the pet service landscape. Our
+    first location, nestled in a cozy community in Bellevue, Nebraska, quickly
+    gained recognition for its exceptional care and personalized services. As
+    the demand for our unique approach to pet hospitality grew, so did the
+    Pets-R-Us family. With pride and gratitude, we have expanded our presence to
+    one more location in Omaha, Nebraska, strategically positioned to cater to
+    the diverse needs of pet owners across the region. From bustling urban
+    centers to tranquil suburban havens, each Pets-R-Us store is a testament to
+    our unwavering commitment to excellence. Our expansion reflects the trust
+    and support of our loyal patrons, encouraging us to continue providing
+    top-tier services in an ever-expanding footprint.
+  </p>
+
+  <div class="container">
+    <div class="locations-info">
+      <h4>Bellevue</h4>
+      <p>1000 Galvin Road S; Bellevue, NE 68005</p>
+      <h4>Omaha</h4>
+      <p>5300 N. 30th Street, Bldg. 10, Room 202; Omaha, NE 68111</p>
+    </div>
+    <div class="pet-of-the-week">
+      <div class="pet-of-the-week-card">
+        <div class="pet-of-the-week-title">Pet of the Week</div>
+        <div class="pet-of-the-week-content">
+          <p><span class="bold">Name:</span> Thor</p>
+          <p><span class="bold">Age:</span> 1 year</p>
+          <p><span class="bold">Favorite Activity:</span> Sleeping</p>
+          <p><span class="bold">Friends:</span> Loki and Freya</p>
+          <p><span class="bold">Most lovable quality:</span> Loves to cuddle</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- locations section -->
-    <section class="locations">
-        <h3 class="locations-title">
-            Store Locations
-        </h3>
-        <p class="locations-statement">Embarking on our journey in the heart of pet care, Pets-R-Us started as a humble venture with a vision to redefine the pet service landscape. Our first location, nestled in a cozy community in Bellevue, Nebraska, quickly gained recognition for its exceptional care and personalized services. As the demand for our unique approach to pet hospitality grew, so did the Pets-R-Us family. With pride and gratitude, we have expanded our presence to one more location in Omaha, Nebraska, strategically positioned to cater to the diverse needs of pet owners across the region. From bustling urban centers to tranquil suburban havens, each Pets-R-Us store is a testament to our unwavering commitment to excellence. Our expansion reflects the trust and support of our loyal patrons, encouraging us to continue providing top-tier services in an ever-expanding footprint.</p>
+<!-- Mission section-->
+<section class="mission">
+  <h3 class="mission-title">Our Mission</h3>
+  <p class="mission-statement">
+    At Pets-R-Us, our mission is to enrich the lives of pets and their owners by
+    providing unparalleled care creating a home away from home for furry
+    companions. We are dedicated to delivering premium boarding, grooming, and
+    training services that prioritize every pet's safety, well-being, and
+    happiness. Our commitment extends beyond the traditional pet service model;
+    we aspire to build a vibrant community of pet enthusiasts who share their
+    passion and experiences. We strive to foster an environment where pet owners
+    can connect, learn, and celebrate the joys of pet parenting together.
+  </p>
 
-        <div class="container">
-            <div class="locations-info">
-                <h4>Bellevue</h4>
-                <p>1000 Galvin Road S; Bellevue, NE 68005</p>
-                <h4>Omaha</h4>
-                <p>5300 N. 30th Street, Bldg. 10, Room 202; Omaha, NE 68111</p>
-            </div>
-            <div class="pet-of-the-week">
-                <div class="pet-of-the-week-card">
-                    <div class="pet-of-the-week-title">
-                        Pet of the Week
-                    </div>
-                    <div class="pet-of-the-week-content">
-                        <p><span class="bold">Name:</span> Thor</p>
-                        <p><span class="bold">Age:</span> 1 year</p>
-                        <p><span class="bold">Favorite Activity:</span> Sleeping</p>
-                        <p><span class="bold">Friends:</span> Loki and Freya</p>
-                        <p><span class="bold">Most lovable quality:</span> Loves to cuddle</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <div class="mission-card">
+    <h4 class="mission-card-title">Location Hours</h4>
+    <div class="mission-card-content">
+      <ul>
+        <li>Mon 6:30 AM - 7:00 PM</li>
+        <li>Tues 6:30 AM - 7:00 PM</li>
+        <li>Wed 6:30 AM - 7:00 PM</li>
+        <li>Thurs 6:30 AM - 7:00 PM</li>
+        <li>Fri 6:30 AM - 7:00 PM</li>
+        <li>Sat 10:00 AM - 5:00 PM</li>
+        <li>Sun 10:00 AM - 5:00 PM</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-    <!-- Mission section-->
-    <section class="mission">
-        <h3 class="mission-title">
-            Our Mission
-        </h3>
-        <p class="mission-statement">
-            At Pets-R-Us, our mission is to enrich the lives of pets and their owners by providing unparalleled care creating a home away from home for furry companions. We are dedicated to delivering premium boarding, grooming, and training services that prioritize every pet's safety, well-being, and happiness. Our commitment extends beyond the traditional pet service model; we aspire to build a vibrant community of pet enthusiasts who share their passion and experiences. We strive to foster an environment where pet owners can connect, learn, and celebrate the joys of pet parenting together.
-        </p>
+<!-- Testimonials section -->
+<section class="testimonials">
+  <h3 class="testimonials-title">Guests Testimonials</h3>
+  <div class="guest-quote-card">
+    <p class="guest-quote">
+      "Pets-R-Us has been an absolute game-changer for my furry friends. The
+      grooming services are unparalleled, creating not just aesthetically
+      pleasing pets but genuinely happy ones. The attention to detail and love
+      they shower on each animal is heartening. I trust them wholeheartedly with
+      my pets' well-being, and they've never disappointed. Pets-R-Us is not just
+      a service provider; it's a haven for our beloved companions."
+    </p>
+    <p class="guest">- Emma S.</p>
+  </div>
+  <div class="guest-quote-card">
+    <p class="guest-quote">
+      When work took me on an unexpected trip, I was stressed about leaving my
+      dog behind. That's when Pets-R-Us came to the rescue. Their boarding
+      services are nothing short of exceptional. The facilities are clean, the
+      staff is caring, and they even shared regular updates about my pet's
+      activities. It's evident that the team at Pets-R-Us is passionate about
+      what they do. I'm grateful for the peace of mind they provide, knowing my
+      dog is in capable and loving hands.
+    </p>
+    <p class="guest">- Alex M.</p>
+  </div>
+  <div class="guest-quote-card">
+    <p class="guest-quote">
+      Training our energetic puppy was a daunting task until we discovered
+      Pets-R-Us. The trainers here are not just experts; they are patient,
+      understanding, and incredibly skilled. They tailored the training program
+      to fit our dog's personality, and the results were astounding. Now, our
+      once mischievous pup is a well-behaved, happy member of the family.
+      Pets-R-Us made the training process enjoyable and effective, and we
+      couldn't be happier with the outcome.
+    </p>
+    <p class="guest">- Sophie R.</p>
+  </div>
+</section>
 
-        <div class="mission-card">
-            <h4 class="mission-card-title">
-                Location Hours
-            </h4>
-            <div class="mission-card-content">
-                <ul>
-                    <li>Mon 6:30 AM - 7:00 PM</li>
-                    <li>Tues 6:30 AM - 7:00 PM</li>
-                    <li>Wed 6:30 AM - 7:00 PM</li>
-                    <li>Thurs 6:30 AM - 7:00 PM</li>
-                    <li>Fri 6:30 AM - 7:00 PM</li>
-                    <li>Sat 10:00 AM - 5:00 PM</li>
-                    <li>Sun 10:00 AM - 5:00 PM</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+<!-- Contact us section -->
+<section class="contact-us">
+  <h3 class="contact-us-title">Contact Us</h3>
+  <p class="contact-us-info">
+    At Pets-R-Us, we are always here to assist you and your beloved pets.
+    Whether you have inquiries about our grooming services, want to book a cozy
+    spot for boarding, or are interested in our specialized training programs,
+    our dedicated team is ready to help. Contact us through the provided contact
+    form, and we will reply promptly. Our knowledgeable and friendly staff is
+    eager to address any questions or concerns. Your pets' well-being is our top
+    priority, and we are committed to providing the highest level of care and
+    customer service. Thank you for considering Pets-R-Us, where your pets are
+    not just our clients but cherished members of our extended family.
+  </p>
 
-    <!-- Testimonials section -->
-    <section class="testimonials">
-        <h3 class="testimonials-title">
-            Guests Testimonials
-        </h3>
-        <div class="guest-quote-card">
-            <p class="guest-quote">
-                "Pets-R-Us has been an absolute game-changer for my furry friends. The grooming services are unparalleled, creating not just aesthetically pleasing pets but genuinely happy ones. The attention to detail and love they shower on each animal is heartening. I trust them wholeheartedly with my pets' well-being, and they've never disappointed. Pets-R-Us is not just a service provider; it's a haven for our beloved companions."
-            </p>
-            <p class="guest">
-                - Emma S.
-            </p>
-        </div>
-        <div class="guest-quote-card">
-            <p class="guest-quote">
-                When work took me on an unexpected trip, I was stressed about leaving my dog behind. That's when Pets-R-Us came to the rescue. Their boarding services are nothing short of exceptional. The facilities are clean, the staff is caring, and they even shared regular updates about my pet's activities. It's evident that the team at Pets-R-Us is passionate about what they do. I'm grateful for the peace of mind they provide, knowing my dog is in capable and loving hands.
-            </p>
-            <p class="guest">
-                - Alex M.
-            </p>
-        </div>
-        <div class="guest-quote-card">
-            <p class="guest-quote">
-                Training our energetic puppy was a daunting task until we discovered Pets-R-Us. The trainers here are not just experts; they are patient, understanding, and incredibly skilled. They tailored the training program to fit our dog's personality, and the results were astounding. Now, our once mischievous pup is a well-behaved, happy member of the family. Pets-R-Us made the training process enjoyable and effective, and we couldn't be happier with the outcome.
-            </p>
-            <p class="guest">
-                - Sophie R.
-            </p>
-        </div>
-    </section>
+  <form>
+    <input type="email" placeholder="Email" />
+    <a href="#" class="btn btn-primary">Send</a>
+  </form>
+</section>
 
-    <!-- Contact us section -->
-    <section class="contact-us">
-        <h3 class="contact-us-title">
-            Contact Us
-        </h3>
-        <p class="contact-us-info">At Pets-R-Us, we are always here to assist you and your beloved pets. Whether you have inquiries about our grooming services, want to book a cozy spot for boarding, or are interested in our specialized training programs, our dedicated team is ready to help. Contact us through the provided contact form, and we will reply promptly. Our knowledgeable and friendly staff is eager to address any questions or concerns. Your pets' well-being is our top priority, and we are committed to providing the highest level of care and customer service. Thank you for considering Pets-R-Us, where your pets are not just our clients but cherished members of our extended family.</p>
-
-        <form>
-            <input type="email" placeholder="Email">
-            <a href="#" class="btn btn-primary">Send</a>
-        </form>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>Images courtesy of <a href="https://unsplash.com/">Unsplash</a>.</p>
-    </footer>
-</body>
-</html>
+<!-- Footer -->
+<%- include('_footer.ejs') %>

@@ -17,15 +17,29 @@ app.use(express.static(path.join(__dirname, "public")));
 //Define routes
 app.get('/', (req, res) => {
     res.render('index', {
-        title: 'Pets-R-Us: Home',
+        title: 'Pets-R-Us | Home',
         pageTitle: 'Landing Page'
     });
 });
 
 app.get('/grooming', (req, res) => {
     res.render('grooming', {
-        title: "Pets-R-Us: Grooming",
+        title: "Pets-R-Us | Grooming",
         pageTitle: "Grooming"
+    });
+});
+
+app.get('/boarding', (req, res) => {
+    res.render('boarding', {
+        title: "Pets-R-Us | Boarding",
+        pageTitle: "Boarding"
+    });
+});
+
+app.get('/training', (req, res) => {
+    res.render('training', {
+        title: "Pets-R-Us | Training",
+        pageTitle: "Training" 
     });
 });
 

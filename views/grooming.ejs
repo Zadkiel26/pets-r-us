@@ -1,93 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> <%= title %> </title>
-    <!-- Link to CSS file and Google fonts-->
-    <link rel="stylesheet" href="styles/site.css">
-    <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700" rel="stylesheet" />
-</head>
-<body>
-    <!-- Header section -->
-    <header>
-        <h2>
-            <a href="/">Pets-R-Us</a>
-        </h2>
-        <!-- navbar section -->
-        <nav class="nav-container">
-            <div class="nav-drop-down">
-                <span>Services</span>
-                <!-- navbar drop-down-menu content -->
-                <div class="nav-drop-down-content">
-                    <li>
-                        <a href="#">Boarding</a>
-                    </li>
-                    <li>
-                        <a href="/grooming">Grooming</a>
-                    </li>
-                    <li>
-                        <a href="#">Training</a>
-                    </li>
-                </div>
-            </div>
-            <li>
-                <a href="#">Customers</a>
-            </li>
-            <li>
-                <a href="#">Booking</a>
-            </li>
-            <li>
-                <a href="#">My Appointments</a>
-            </li>
-        </nav>
-    </header>
-    <!-- Overview section -->
-    <section class="overview">
-        <div class="background-image"></div>
-        <div class="overview-content">
-            <h1 class="overview-title">
-                Pets-R-Us
-            </h1>
-            <h3 class="overview-info">
-                Where Your Pets Feel Right at Home
-            </h3>
-            <a href="#" class="btn btn-primary">
-                Sign up for a free account
-            </a>
-        </div>
-    </section>
-    <!-- Grooming section -->
-    <section class="grooming">
-        <h3 class="grooming-title">
-            Grooming Info
-        </h3>
-        <p class="grooming-info">
-            Embark on a grooming journey with Pets-R-Us, where we go beyond a mere haircut to provide an exceptional spa-like experience for your beloved pets. Our grooming services are not just about aesthetics; they are about holistic care that promotes the well-being of your furry companions. Our highly skilled and compassionate grooming team takes pride in tailoring services to meet each pet's unique needs, ensuring they leave our spa looking and feeling their absolute best.
-        </p>
-        <p class="grooming-info">
-            At Pets-R-Us, we understand that grooming is not a one-size-fits-all endeavor. That is why we offer services from stylish haircuts to soothing baths and meticulous nail trims executed with precision and care. Our grooming facilities boast state-of-the-art equipment and a calming ambiance, creating an environment that promotes relaxation and minimizes stress for your pets.
-        </p>
-        <p class="grooming-info">
-            We prioritize using top-quality products that are gentle on their fur and skin, leaving them with a soft, shiny coat and a refreshed demeanor. Our commitment to excellence extends to personalized attention, ensuring each pet receives the care they need to thrive. Whether your furry friend requires routine grooming or a special spa day, Pets-R-Us is the go-to destination for premium grooming services. Choose Pets-R-Us for an unparalleled grooming experience that goes beyond the ordinary, leaving your pets looking forward to their next pampering session.
-        </p>
+<!-- Header section -->
+<%- include('_header') %>
 
-        <div class="grooming-card">
-            <div class="grooming-card-title">
-                Pricing
-            </div>
-            <ul>
-                <li><span class="bold">Full Spa Treatment:</span> $65</li>
-                <li><span class="bold">Pampered Paws Package:</span> $30</li>
-                <li><span class="bold">De-Shedding Therapy:</span> $50</li>
-                <li><span class="bold">Fresh Breath Dental Treatment:</span> $35</li>
-                <li><span class="bold">Aromatherapy Relaxation:</span> $20</li>
-            </ul>
-        </div>
-    </section>
-    <!-- Footer -->
-    <footer>
-        <p>Images courtesy of <a href="https://unsplash.com/">Unsplash</a>.</p>
-    </footer>
-</body>
-</html>
+<!-- Overview section -->
+<section class="overview">
+  <div class="background-image"></div>
+  <div class="overview-content">
+    <h1 class="overview-title">Pets-R-Us</h1>
+    <h3 class="overview-info">Where Your Pets Feel Right at Home</h3>
+    <a href="#" class="btn btn-primary"> Sign up for a free account </a>
+  </div>
+</section>
+<!-- Grooming section -->
+<section class="grooming">
+  <h3 class="grooming-title">Grooming Info</h3>
+  <p class="grooming-info">
+    Embark on a grooming journey with Pets-R-Us, where we go beyond a mere
+    haircut to provide an exceptional spa-like experience for your beloved pets.
+    Our grooming services are not just about aesthetics; they are about holistic
+    care that promotes the well-being of your furry companions. Our highly
+    skilled and compassionate grooming team takes pride in tailoring services to
+    meet each pet's unique needs, ensuring they leave our spa looking and
+    feeling their absolute best.
+  </p>
+  <p class="grooming-info">
+    At Pets-R-Us, we understand that grooming is not a one-size-fits-all
+    endeavor. That is why we offer services from stylish haircuts to soothing
+    baths and meticulous nail trims executed with precision and care. Our
+    grooming facilities boast state-of-the-art equipment and a calming ambiance,
+    creating an environment that promotes relaxation and minimizes stress for
+    your pets.
+  </p>
+  <p class="grooming-info">
+    We prioritize using top-quality products that are gentle on their fur and
+    skin, leaving them with a soft, shiny coat and a refreshed demeanor. Our
+    commitment to excellence extends to personalized attention, ensuring each
+    pet receives the care they need to thrive. Whether your furry friend
+    requires routine grooming or a special spa day, Pets-R-Us is the go-to
+    destination for premium grooming services. Choose Pets-R-Us for an
+    unparalleled grooming experience that goes beyond the ordinary, leaving your
+    pets looking forward to their next pampering session.
+  </p>
+
+  <div class="grooming-card">
+    <div class="grooming-card-title">Pricing</div>
+    <ul>
+      <li><span class="bold">Full Spa Treatment:</span> $65</li>
+      <li><span class="bold">Pampered Paws Package:</span> $30</li>
+      <li><span class="bold">De-Shedding Therapy:</span> $50</li>
+      <li><span class="bold">Fresh Breath Dental Treatment:</span> $35</li>
+      <li><span class="bold">Aromatherapy Relaxation:</span> $20</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Footer -->
+<%- include('_footer.ejs') %>
