@@ -1,25 +1,27 @@
-<!-- Header section -->
-<%- include('_header.ejs') %>
+<!-- 
 
-<!-- Overview Section -->
-<section class="overview">
-    <div class="background-image"></div>
-    <div class="overview-content">
-      <h1 class="overview-title">Pets-R-Us</h1>
-      <h3 class="overview-info">Where Your Pets Feel Right at Home</h3>
-      <a href="#" class="btn btn-primary"> Sign up for a free account </a>
-    </div>
-</section>
+ Title: training.ejs
+ Date: 11/26/2023
+ Author: Zadkiel Rodriguez Alvarado
+ Description: Training Page
+ Sources:
+        https://github.com/buwebdev/web-340/tree/master
+
+-->
+
+<!-- Header section -->
+<%- include('./partials/_header.ejs') %>
+
 
 <section class="training">
-    <h3 class="training-title">Training</h3>
-    <p class="training-info">
+    <h3 class="title">Training</h3>
+    <p class="paragraph">
         At Pets-R-Us, our training programs are designed to cater to each pet's unique needs and behaviors. We offer a variety of training sessions conducted by experienced professionals who use positive reinforcement techniques. We address obedience training, behavior modification, and socialization through tailored programs. These sessions enhance communication and understanding between pets and their owners, promoting a harmonious relationship. Whether puppy training, basic obedience, or advanced commands, our trainers work closely with pets and their owners to achieve desired behavioral outcomes in a supportive and encouraging environment. We aim to empower pets to learn and thrive while fostering a strong bond between them and their families.
     </p>
 </section>
 
 <section class="meet-trainers">
-    <h3 class="meet-trainers-title">Meet the Trainers</h3>
+    <h3 class="title">Meet the Trainers</h3>
     <div class="container">
         <div class="image-card">
             <img src="../images/Trainer1.jpg" style="height: 400px; width: 450px;">
@@ -54,28 +56,28 @@
 </section>
 
 <section class="pricing">
-    <h3 class="pricing-title">Pricing</h3>
+    <h3 class="title">Pricing</h3>
     <div class="container">
-        <div class="basic-card">
-            <p class="basic-card-title">Basic Training Package - $200</p>
-            <ul class="basic-card-content">
+        <div class="card">
+            <p class="card-title">Basic Training Package - $200</p>
+            <ul class="training-card-content">
                 <li>We will teach your pet essential obedience commands</li>
                 <li>We will work on leash manners and basic socialization skills</li>
                 <li>We will touch on basic housebreaking</li>
             </ul>
-            <p class="basic-card-length">6 week course</p>
+            <p class="training-card-length">6 week course</p>
         </div>
-        <div class="advanced-card">
-            <p class="advanced-card-title">Advance Training Package - $400</p>
-            <ul class="advanced-card-content">
+        <div class="card">
+            <p class="card-title">Advance Training Package - $400</p>
+            <ul class="training-card-content">
                 <li>All the basic training package</li>
                 <li>We will target behavior modification for specific issues</li>
                 <li>We will work on off-leash training and advanced social techniques</li>
             </ul>
-            <p class="advanced-card-length">8 week course</p>
+            <p class="training-card-length">8 week course</p>
         </div>
     </div>
 </section>
 
 <!-- Footer -->
-<%- include('_footer.ejs') %>
+<%- include('./partials/_footer.ejs') %>

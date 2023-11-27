@@ -1,20 +1,22 @@
-<!-- Header section -->
-<%- include('_header.ejs') %>
+<!-- 
 
-<!-- Overview Section -->
-<section class="overview">
-  <div class="background-image"></div>
-  <div class="overview-content">
-    <h1 class="overview-title">Pets-R-Us</h1>
-    <h3 class="overview-info">Where Your Pets Feel Right at Home</h3>
-    <a href="#" class="btn btn-primary"> Sign up for a free account </a>
-  </div>
-</section>
+ Title: index.ejs
+ Date: 11/26/2023
+ Author: Zadkiel Rodriguez Alvarado
+ Description: Landing Page
+ Sources:
+        https://github.com/buwebdev/web-340/tree/master
+
+-->
+
+<!-- Header section -->
+<%- include('./partials/_header.ejs') %>
+
 
 <!-- locations section -->
 <section class="locations">
-  <h3 class="locations-title">Store Locations</h3>
-  <p class="locations-statement">
+  <h3 class="title">Store Locations</h3>
+  <p class="paragraph">
     Embarking on our journey in the heart of pet care, Pets-R-Us started as a
     humble venture with a vision to redefine the pet service landscape. Our
     first location, nestled in a cozy community in Bellevue, Nebraska, quickly
@@ -37,8 +39,8 @@
       <p>5300 N. 30th Street, Bldg. 10, Room 202; Omaha, NE 68111</p>
     </div>
     <div class="pet-of-the-week">
-      <div class="pet-of-the-week-card">
-        <div class="pet-of-the-week-title">Pet of the Week</div>
+      <div class="card">
+        <div class="card-title">Pet of the Week</div>
         <div class="pet-of-the-week-content">
           <p><span class="bold">Name:</span> Thor</p>
           <p><span class="bold">Age:</span> 1 year</p>
@@ -53,8 +55,8 @@
 
 <!-- Mission section-->
 <section class="mission">
-  <h3 class="mission-title">Our Mission</h3>
-  <p class="mission-statement">
+  <h3 class="title">Our Mission</h3>
+  <p class="paragraph">
     At Pets-R-Us, our mission is to enrich the lives of pets and their owners by
     providing unparalleled care creating a home away from home for furry
     companions. We are dedicated to delivering premium boarding, grooming, and
@@ -65,8 +67,8 @@
     can connect, learn, and celebrate the joys of pet parenting together.
   </p>
 
-  <div class="mission-card">
-    <h4 class="mission-card-title">Location Hours</h4>
+  <div class="card">
+    <h4 class="card-title">Location Hours</h4>
     <div class="mission-card-content">
       <ul>
         <li>Mon 6:30 AM - 7:00 PM</li>
@@ -83,7 +85,7 @@
 
 <!-- Testimonials section -->
 <section class="testimonials">
-  <h3 class="testimonials-title">Guests Testimonials</h3>
+  <h3 class="title">Guests Testimonials</h3>
   <div class="guest-quote-card">
     <p class="guest-quote">
       "Pets-R-Us has been an absolute game-changer for my furry friends. The
@@ -123,8 +125,8 @@
 
 <!-- Contact us section -->
 <section class="contact-us">
-  <h3 class="contact-us-title">Contact Us</h3>
-  <p class="contact-us-info">
+  <h3 class="title">Contact Us</h3>
+  <p class="paragraph">
     At Pets-R-Us, we are always here to assist you and your beloved pets.
     Whether you have inquiries about our grooming services, want to book a cozy
     spot for boarding, or are interested in our specialized training programs,
@@ -143,4 +145,4 @@
 </section>
 
 <!-- Footer -->
-<%- include('_footer.ejs') %>
+<%- include('./partials/_footer.ejs') %>

@@ -1,33 +1,29 @@
-<!-- Header section -->
-<%- include('_header.ejs') %>
+<!-- 
 
-<!-- Overview Section -->
-<section class="overview">
-    <div class="background-image"></div>
-    <div class="overview-content">
-        <h1 class="overview-title">
-            Pets-R-Us
-        </h1>
-        <h3 class="overview-info">
-            Where Your Pets Feel Right at Home
-        </h3>
-        <a href="#" class="btn btn-primary">
-            Sign up for a free account
-        </a>
-    </div>
-</section>
+ Title: boarding.ejs
+ Date: 11/26/2023
+ Author: Zadkiel Rodriguez Alvarado
+ Description: Boarding Page
+ Sources:
+        https://github.com/buwebdev/web-340/tree/master
+
+-->
+
+<!-- Header section -->
+<%- include('./partials/_header.ejs') %>
+
 
 <!-- Boarding Section -->
 <section class="boarding">
-    <h3 class="boarding-title">Boarding Info</h3>
-    <p class="boarding-info">
-        At Pets-R-Us, we offer top-notch boarding services to cater to your pet's comfort and happiness. Our boarding facilities are a haven for pets, providing them a home-like environment even when they are away. With spacious and luxurious suites, your furry companions can relax in style, with cozy bedding and an array of toys to entertain them. Our trained and compassionate staff ensures your pet receives round-the-clock care, including regular exercise routines and supervised playtime in secure areas. Recognizing the significance of a well-balanced diet, we provide premium pet food choices and cater to specific dietary requirements, ensuring your pet's health and satisfaction throughout their stay. Additionally, we go the extra mile to offer spa treatments as part of our boarding packages, giving your pet the royal treatment with grooming sessions and relaxing spa experiences. While your pet is with us, you can stay connected through daily updates and photos, providing peace of mind and assurance that your furry friend is in good hands. Reservations are recommended in advance, particularly during busy periods, to ensure availability. For the safety of all our guests, we require pets to be up-to-date on vaccinations before their stay. Pets-R-Us is dedicated to providing a nurturing and enjoyable boarding experience for your beloved pets. Whether it is a short-term stay or an extended vacation, our priority is to create a home-away-from-home environment where your pet feels loved, safe, and cared for. Contact us today to explore our boarding facilities, meet our team, and schedule a delightful stay for your furry companion!
+    <h3 class="title">Boarding Info</h3>
+    <p class="paragraph">
+        At Pets-R-Us, we offer top-notch boarding services to cater to your pet's comfort and happiness. Our boarding facilities are a haven for pets, providing them a home-like environment even when they are away. With spacious and luxurious suites, your furry companions can relax in style, with cozy bedding and an array of toys to entertain them. Our trained and compassionate staff ensures your pet receives round-the-clock care, including regular exercise routines and supervised playtime in secure areas. Recognizing the significance of a well-balanced diet, we provide premium pet food choices and cater to specific dietary requirements, ensuring your pet's health and satisfaction throughout their stay. Additionally, we go the extra mile to offer spa treatments as part of our boarding packages, giving your pet the royal treatment with grooming sessions and relaxing spa experiences.
     </p>
 
     <div class="container">
         <div class="boarding-prices">
-            <div class="prices-card">
-                <div class="prices-title">Prices per Night</div>
+            <div class="card">
+                <div class="card-title">Prices per Night</div>
                 <div class="boarding-prices-content">
                     <p><span class="bold">Dogs:</span> $40 per dog</p>
                     <p><span class="bold">Cats:</span> $35 per cat</p>
@@ -36,7 +32,7 @@
             </div>
         </div>
         <div class="prices-info">
-            <p class="prices-text">
+            <p class="paragraph">
                 At Pets-R-Us, our pricing per night for pet boarding is designed to provide comprehensive care and comfort for your furry companions. The fee includes a cozy and secure space for your pet, regular meals, access to clean water, daily exercise routines, and attentive staff members ensuring their well-being. Additionally, we offer various amenities tailored to suit your pet's needs, ensuring they feel safe and content throughout their stay. We have crafted our pricing model to mirror our dedication to creating a nurturing and delightful atmosphere for each pet, guaranteeing they receive individualized care and attention.
             </p>
         </div>
@@ -44,4 +40,4 @@
 </section>
 
     <!-- Footer -->
-<%- include('_footer.ejs') %>
+<%- include('./partials/_footer.ejs') %>

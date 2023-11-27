@@ -1,0 +1,42 @@
+<!-- 
+
+ Title: register.ejs
+ Date: 11/26/2023
+ Author: Zadkiel Rodriguez Alvarado
+ Description: Register Page
+ Sources:
+        https://github.com/buwebdev/web-340/tree/master
+
+-->
+<!-- Header section -->
+<%- include('./partials/_header.ejs') %>
+
+<!-- Registration form section -->
+<section class="registration">
+    <h3 class="title">Registration Form</h3>
+
+    <div class="card">
+        <div class="card-content">
+            <div class="form">
+                <form action="/register" method="post">
+                    <div class="form-field">
+                        <label for="customerID">Customer ID</label>
+                        <br>
+                        <input type="text" name="customerID" class="input" id="customerID">
+                    </div>
+                    <div class="form-field">
+                        <label for="email">Email</label>
+                        <br>
+                        <input type="text" name="email" class="input" id="email">
+                    </div>
+                    <div class="form-field">
+                        <input type="submit" value="Sign up" class="btn btn-primary full-width">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<%- include('./partials/_footer.ejs') %>

@@ -1,19 +1,21 @@
-<!-- Header section -->
-<%- include('_header') %>
+<!-- 
 
-<!-- Overview section -->
-<section class="overview">
-  <div class="background-image"></div>
-  <div class="overview-content">
-    <h1 class="overview-title">Pets-R-Us</h1>
-    <h3 class="overview-info">Where Your Pets Feel Right at Home</h3>
-    <a href="#" class="btn btn-primary"> Sign up for a free account </a>
-  </div>
-</section>
+ Title: grooming.ejs
+ Date: 11/26/2023
+ Author: Zadkiel Rodriguez Alvarado
+ Description: Grooming Page
+ Sources:
+        https://github.com/buwebdev/web-340/tree/master
+
+-->
+
+<!-- Header section -->
+<%- include('./partials/_header.ejs') %>
+
 <!-- Grooming section -->
 <section class="grooming">
-  <h3 class="grooming-title">Grooming Info</h3>
-  <p class="grooming-info">
+  <h3 class="title">Grooming Info</h3>
+  <p class="paragraph">
     Embark on a grooming journey with Pets-R-Us, where we go beyond a mere
     haircut to provide an exceptional spa-like experience for your beloved pets.
     Our grooming services are not just about aesthetics; they are about holistic
@@ -22,7 +24,7 @@
     meet each pet's unique needs, ensuring they leave our spa looking and
     feeling their absolute best.
   </p>
-  <p class="grooming-info">
+  <p class="paragraph">
     At Pets-R-Us, we understand that grooming is not a one-size-fits-all
     endeavor. That is why we offer services from stylish haircuts to soothing
     baths and meticulous nail trims executed with precision and care. Our
@@ -30,7 +32,7 @@
     creating an environment that promotes relaxation and minimizes stress for
     your pets.
   </p>
-  <p class="grooming-info">
+  <p class="paragraph">
     We prioritize using top-quality products that are gentle on their fur and
     skin, leaving them with a soft, shiny coat and a refreshed demeanor. Our
     commitment to excellence extends to personalized attention, ensuring each
@@ -41,8 +43,8 @@
     pets looking forward to their next pampering session.
   </p>
 
-  <div class="grooming-card">
-    <div class="grooming-card-title">Pricing</div>
+  <div class="card">
+    <div class="card-title">Pricing</div>
     <ul>
       <li><span class="bold">Full Spa Treatment:</span> $65</li>
       <li><span class="bold">Pampered Paws Package:</span> $30</li>
@@ -54,4 +56,4 @@
 </section>
 
 <!-- Footer -->
-<%- include('_footer.ejs') %>
+<%- include('./partials/_footer.ejs') %>

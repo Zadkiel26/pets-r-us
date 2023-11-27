@@ -1,9 +1,17 @@
 /* 
+ Title: site.ejs
+ Date: 11/26/2023
+ Author: Zadkiel Rodriguez Alvarado
+ Description: Styling of the website
+
 Images taken from:
-https://unsplash.com/photos/man-cutting-hair-of-goat-QThF7Iv6vLY
-https://unsplash.com/photos/man-petting-long-coated-brown-dog-while-sitting-on-green-grass-covered-ground-during-day-time-MjXND8EDCMo
-https://unsplash.com/photos/woman-playing-with-dog-KvKop_a_EXw
-https://unsplash.com/photos/man-sitting-beside-black-dog-tk5LWGNiWVs
+    https://unsplash.com/photos/man-cutting-hair-of-goat-QThF7Iv6vLY
+    https://unsplash.com/photos/man-petting-long-coated-brown-dog-while-sitting-on-green-grass-covered-ground-during-day-time-MjXND8EDCMo
+    https://unsplash.com/photos/woman-playing-with-dog-KvKop_a_EXw
+    https://unsplash.com/photos/man-sitting-beside-black-dog-tk5LWGNiWVs
+
+Sources:
+    https://buwebdev-pets-r-us.onrender.com/styles/site.css 
  */
 
 body {
@@ -152,8 +160,10 @@ section {
 .btn {
     font-weight: bold;
     border: 2px solid #80a3db;
+    background-color: transparent;
     font-size: 16px;
     margin: 4px 2px;
+    padding: 8px 14px;
     text-transform: uppercase;
     transition: all 0.3s ease;
 }
@@ -180,12 +190,7 @@ section {
     }
 }
 
-/* Store Location styling */
-.locations {
-    background-color: rgba(128, 128, 128, 0.1);
-}
-
-.locations-title {
+.title {
     font-size: 48px;
     text-align: center;
     background-color: #80a3db;
@@ -195,9 +200,9 @@ section {
     text-transform: uppercase;
     margin-top: 0;
     margin-bottom: 30px;
-} 
+}
 
-.locations-statement {
+.paragraph {
     max-width: 775px;
     font-size: 18px;
     line-height: 2;
@@ -206,10 +211,44 @@ section {
     color: #0a3e61;
 }
 
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 12px;
+    width: 500px;
+    cursor: default;
+    text-align: center;
+    color: #0a3e61;
+    background-color: #fff;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 28px;
+    text-align: center;
+    font-weight: 600;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+}
+
+.card-content {
+    width: 100%;
+}
+
 .container {
     display: grid;
     grid-template-columns: auto auto;
     grid-gap: 50px;
+}
+
+/* Store Location styling */
+.locations {
+    background-color: rgba(128, 128, 128, 0.1);
 }
 
 .locations-info {
@@ -228,79 +267,16 @@ section {
     width: 300px;
 }
 
-.pet-of-the-week-card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 12px;
-    cursor: default;
-    color: #0a3e61;
-    background-color: #fff;
-    border-radius: 4px;
-    margin-bottom: 30px;
-    transition: all 0.3s ease;
-}
-
-.pet-of-the-week-card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-.pet-of-the-week-title {
-    font-size: 28px;
-    text-align: center;
-    font-weight: 600;
-    text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
-    text-transform: uppercase;
-}
-
 .bold {
     font-weight: 800;
 }
 
 .pet-of-the-week-content {
     font-size: 18px;
-    text-align: left;
+    text-align: center;
 }
 
 /* Mission styling */
-.mission-title {
-    font-size: 48px;
-    text-align: center;
-    background-color: #80a3db;
-    color: #0a3e61;
-    text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    text-transform: uppercase;
-    margin-top: 0;
-    margin-bottom: 30px;
-}
-
-.mission-statement {
-    max-width: 775px;
-    font-size: 18px;
-    line-height: 2;
-    margin-bottom: 30px;
-    text-align: center;
-    color: #0a3e61;
-}
-
-.mission-card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    width: 300px;
-    padding: 20px;
-    text-align: center;
-    transition: all 0.3s ease;
-    border-radius: 4px;
-    margin-bottom: 30px;
-}
-
-.mission-card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-.mission-card-title {
-    font-size: 32px;
-    color: #0a3e61;
-    text-transform: uppercase;
-}
 
 .mission-card-content {
     padding: 10px;
@@ -312,18 +288,6 @@ section {
 /* Testimonials styling */
 .testimonials {
     background-color: rgba(128, 128, 128, 0.1);
-}
-
-.testimonials-title {
-    font-size: 48px;
-    text-align: center;
-    background-color: #80a3db;
-    color: #0a3e61;
-    text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    text-transform: uppercase;
-    margin-top: 0;
-    margin-bottom: 30px;
 }
 
 .guest-quote-card {
@@ -356,27 +320,6 @@ section {
     margin-bottom: 30px;
 }
 
-.contact-us-title {
-    font-size: 48px;
-    text-align: center;
-    background-color: #80a3db;
-    color: #0a3e61;
-    text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    text-transform: uppercase;
-    margin-top: 0;
-    margin-bottom: 30px;
-}
-
-.contact-us-info {
-    max-width: 775px;
-    font-size: 18px;
-    line-height: 2;
-    margin-bottom: 30px;
-    text-align: center;
-    color: #0a3e61;
-}
-
 .contact-us form {
     display: flex;
     flex-direction: column;
@@ -398,62 +341,9 @@ section {
     width: 100px;
 }
 
-/* footer styling */
-footer {
-    width: 100%;
-}
-
-footer p {
-    margin-top: 40px;
-    text-align: center;
-}
-
 /* grooming styling */
 .grooming {
     margin-bottom: 30px;
-}
-
-.grooming-title {
-    font-size: 48px;
-    text-align: center;
-    background-color: #80a3db;
-    color: #0a3e61;
-    text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    text-transform: uppercase;
-    margin-top: 0;
-}
-
-.grooming-info {
-    max-width: 775px;
-    font-size: 18px;
-    line-height: 2;
-    margin-bottom: 30px;
-    text-align: center;
-    color: #0a3e61;
-}
-
-.grooming-card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    margin-bottom: 40px;
-    width: 50%;
-    text-align: center;
-    color: #0a3e61;
-    transition: all 0.3s ease;
-    border-radius: 4px;
-}
-
-.grooming-card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-.grooming-card-title {
-    font-size: 40px;
-    color: #0a3e61;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-    letter-spacing: 2px;
 }
 
 .grooming-card ul li {
@@ -461,97 +351,17 @@ footer p {
 }
 
 /* Boarding styling */
-.boarding-title {
-    font-size: 48px;
-    text-align: center;
-    background-color: #80a3db;
-    color: #0a3e61;
-    text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    text-transform: uppercase;
-    margin-top: 0;
-    margin-bottom: 30px;
-}
-
-.boarding-info {
-    max-width: 1250px;
-    font-size: 20px;
-    line-height: 2;
-    margin-bottom: 30px;
-    text-align: center;
-    color: #0a3e61;
-}
-
-.prices-card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 12px;
-    cursor: default;
-    color: #0a3e61;
-    background-color: #fff;
-    border-radius: 4px;
-    margin-bottom: 30px;
-    transition: all 0.3s ease;
-}
-
-.prices-card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-.prices-title {
-    font-size: 28px;
-    text-align: center;
-    font-weight: 600;
-    text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
-    text-transform: uppercase;
-}
-
 .boarding-prices-content {
     font-size: 18px;
 }
 
-.prices-info {
-    text-align: center;
-    color: #0a3e61;
-    max-width: 700px;
-    font-size: 18px;
-}
-
 /* Training styling */
-.training-title {
-    font-size: 48px;
-    text-align: center;
-    background-color: #80a3db;
-    color: #0a3e61;
-    text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    text-transform: uppercase;
-    margin-top: 0;
-    margin-bottom: 30px;
-}
-
-.training-info {
-    max-width: 975px;
-    font-size: 24px;
-    line-height: 2;
-    margin-bottom: 30px;
-    text-align: center;
-    color: #0a3e61;
+.training p {
+    font-size: 22px;
 }
 
 .meet-trainers {
     background-color: rgba(128, 128, 128, 0.1);
-}
-
-.meet-trainers-title {
-    font-size: 48px;
-    text-align: center;
-    background-color: #80a3db;
-    color: #0a3e61;
-    text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    text-transform: uppercase;
-    margin-top: 0;
-    margin-bottom: 40px;
 }
 
 .image-card {
@@ -607,91 +417,66 @@ footer p {
     padding: 30px;
 }
 
-.pricing-title {
-    font-size: 48px;
+.training-card-content {
+    list-style: circle;
+    margin-left: 30px;
+}
+
+.training-card-length {
+    font-size: 18px;
     text-align: center;
-    background-color: #80a3db;
-    color: #0a3e61;
+    font-weight: 600;
     text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+}
+
+.form {
+    display: inline-grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: auto;
+}
+
+.form-field {
+    padding: 20px;
+    margin-left: 20px;
+}
+
+.form-field label {
+    font-size: 18px;
+}
+
+.form-field .btn {
+    border-radius: 4px;
+    padding: 12px 18px;
+    color: #0a3e61;
+}
+
+.form-field .btn:hover {
+    color: #fff;
+}
+
+.input {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.full-width {
     width: 100%;
-    text-transform: uppercase;
-    margin-top: 0;
-    margin-bottom: 30px;
 }
 
-.basic-card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    cursor: default;
-    color: #0a3e61;
-    background-color: #fff;
-    border-radius: 4px;
-    margin-bottom: 30px;
-    transition: all 0.3s ease;
-}
-
-.basic-card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-.basic-card-title {
-    font-size: 24px;
-    text-align: center;
-    font-weight: 600;
-    text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
-    text-transform: uppercase;
-}
-
-.basic-card-content {
-    list-style: circle;
-    margin-left: 30px;
-}
-
-.basic-card-length {
-    font-size: 18px;
-    text-align: center;
-    font-weight: 600;
-    text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
-    text-transform: uppercase;
-}
-
-.advanced-card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    cursor: default;
-    color: #0a3e61;
-    background-color: #fff;
-    border-radius: 4px;
-    margin-bottom: 30px;
-    transition: all 0.3s ease;
-}
-
-.advanced-card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-.advanced-card-title {
-    font-size: 24px;
-    text-align: center;
-    font-weight: 600;
-    text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
-    text-transform: uppercase;
-}
-
-.advanced-card-content {
-    list-style: circle;
-    margin-left: 30px;
-}
-
-.advanced-card-length {
-    font-size: 18px;
-    text-align: center;
-    font-weight: 600;
-    text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
-    text-transform: uppercase;
-}
-
+/* footer styling */
 footer {
+    width: 100%;
     background-color: rgba(128, 128, 128, 0.1);
     padding: 10px 0;
+}
+
+footer p {
+    margin-top: 40px;
+    text-align: center;
 }
