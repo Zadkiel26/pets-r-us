@@ -469,6 +469,30 @@ section {
     width: 100%;
 }
 
+.table {
+    border-collapse: collapse;
+    width: inherit;
+}
+
+.table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #475999;
+    color: #fff;
+}
+
+.table td, th {
+    border: 1px solid #303030;
+    padding: 8px;
+    text-align: left;
+}
+
+.table-hover tr:hover {
+    background-color: #475999;
+    color: #fff;
+}
+
 /* footer styling */
 footer {
     width: 100%;

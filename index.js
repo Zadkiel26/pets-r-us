@@ -74,6 +74,19 @@ app.get('/register', (req, res) => {
     });
 });
 
+app.get('/customer-list', (req, res) => {
+
+    Customer.find().then(customers => {
+        res.render('customer-list', {
+            title: "Pets-R-Us | Customer List",
+            pageTitle: "Customer List",
+            customers: customers
+        }); 
+    }).catch(err => {
+        res.status(500).send("Customer list failed to load." + err);
+    });  
+});
+
 //Registration
 app.post('/register', async (req, res) => {
     try {
@@ -83,8 +96,12 @@ app.post('/register', async (req, res) => {
         const newCustomer = new Customer({ customerID, email });
         //Save the new customer to the database
         await newCustomer.save();
-        //Redirect to landing page if successful
-        res.redirect('/');
+        //Render the register page after successfully registering the user
+        res.render('register', {
+            title: "Pets-R-Us | Register",
+            pageTitle: "Register",
+            successMessage: "Registration successful!"
+        });
     } catch (err) {
         res.status(500).send('Registration failed. ' + err + req.body);
     }

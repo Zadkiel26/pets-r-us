@@ -1,0 +1,41 @@
+<!-- 
+
+ Title: customer-list.ejs
+ Date: 11/30/2023
+ Author: Zadkiel Rodriguez Alvarado
+ Description: Customer List Page
+ Sources:
+        https://github.com/buwebdev/web-340/tree/master
+
+-->
+<!-- Header Section -->
+<%- include('./partials/_header.ejs') %>
+
+    <section class="customer-list">
+        <h3 class="title">Customer List</h3>
+        <div class="container">
+            <div class="card">
+                <div class="card-content">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Customer ID</th>
+                                <th>Email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% customers.forEach(customer => { %>
+                                <tr>
+                                    <td><%= customer.customerID %></td>
+                                    <td><%= customer.email %></td>
+                                </tr>
+                            <% }); %>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Footer -->
+<%- include('./partials/_footer.ejs') %>
