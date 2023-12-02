@@ -39,55 +39,63 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
 
 //Define routes
+//Handle GET requests to '/' (index)
 app.get('/', (req, res) => {
+    //Render the 'index' view
     res.render('index', {
         title: 'Pets-R-Us | Home',
         pageTitle: 'Landing Page'
     });
 });
-
+//Handle GET requests to '/grooming'
 app.get('/grooming', (req, res) => {
+    //Render the 'grooming' view
     res.render('grooming', {
         title: "Pets-R-Us | Grooming",
         pageTitle: "Grooming"
     });
 });
-
+//Handle GET requests to '/boarding'
 app.get('/boarding', (req, res) => {
+    //Render the 'boarding' view
     res.render('boarding', {
         title: "Pets-R-Us | Boarding",
         pageTitle: "Boarding"
     });
 });
-
+//Handle GET requests to '/training'
 app.get('/training', (req, res) => {
+    //Render the 'training' view
     res.render('training', {
         title: "Pets-R-Us | Training",
         pageTitle: "Training" 
     });
 });
-
+//Handle GET requests to '/register'
 app.get('/register', (req, res) => {
+    //Render the 'register' view
     res.render('register', {
         title: "Pets-R-Us | Register",
         pageTitle: "Register"
     });
 });
-
+//Handle GET requests to '/customer-list'
 app.get('/customer-list', (req, res) => {
-
+    //Use Mongoose's 'find' function to retrieve a list of customer documents from the database
     Customer.find().then(customers => {
+        //Render the 'customer-list' view with the retrieved customer data
         res.render('customer-list', {
             title: "Pets-R-Us | Customer List",
             pageTitle: "Customer List",
             customers: customers
         }); 
     }).catch(err => {
+        //If there's an error, send a 500 Internal Server Error response with an error message
         res.status(500).send("Customer list failed to load." + err);
     });  
 });
 
-//Registration
+//Handle POST requests to '/register'
 app.post('/register', async (req, res) => {
     try {
         //Request the customerID and email
