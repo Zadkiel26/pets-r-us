@@ -14,14 +14,14 @@ const customerSchema = new mongoose.Schema({
     customerID: {
         type: String,
         unique: true,
-        required: true,
+        required: true
     },
     email: {
         type: String,
         unique: true,
-        required: true,
+        required: true
     },
 });
-//Export the customer
+//Export the customer model
 module.exports = mongoose.model('Customer', customerSchema);
 

@@ -1,0 +1,59 @@
+<!-- 
+
+ Title: appointment.ejs
+ Date: 12/09/2023
+ Author: Zadkiel Rodriguez Alvarado
+ Description: Appointment Page
+ Sources:
+        https://github.com/buwebdev/web-340/tree/master
+
+-->
+<!-- Header section -->
+<%- include('./partials/_header.ejs') %>
+
+<!-- Appointment form section -->
+<section class="appointment">
+    <h3 class="title">Book your appointment</h3>
+
+    <div class="card">
+        <div class="card-content">
+            <form action="/appointment" class="form" method="post">
+                <div class="form-field">
+                    <label for="userName">Username</label>
+                    <br>
+                    <input type="text" name="userName" class="input" id="userName">
+                </div>
+                <div class="form-field">
+                    <label for="firstName">First Name</label>
+                    <br>
+                    <input type="text" name="firstName" class="input" id="firstName">
+                </div>
+                <div class="form-field">
+                    <label for="lastName">Last Name</label>
+                    <br>
+                    <input type="text" name="lastName" class="input" id="lastName">
+                </div>
+                <div class="form-field">
+                    <label for="email">Email</label>
+                    <br>
+                    <input type="text" name="email" class="input" id="email">
+                </div>
+                <div class="form-field">
+                    <label for="service">Service:</label>
+                    <br>
+                    <select name="service" class="input" required>
+                        <% services.forEach(service => { %>
+                            <option value="<%= service.value %>"><%= service.text %></option>
+                        <% }); %>
+                    </select>
+                </div>
+                <div class="form-field">
+                    <input type="submit" value="Book Appointment" class="btn btn-primary full-width">
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<%- include('./partials/_footer.ejs') %>

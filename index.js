@@ -14,6 +14,10 @@ const express = require('express');
 const mongoose = require('mongoose');
 //Import Customer.js
 const Customer = require('./models/customer');
+//Import Appointment.js
+const Appointment = require('./models/appointment');
+//Import the Services JSON
+const servicesData = require('./public/data/services.json');
 //Import the 'path' module for handling file paths
 const path = require('path');
 //Create an instance of the Express app
@@ -94,6 +98,15 @@ app.get('/customer-list', (req, res) => {
         res.status(500).send("Customer list failed to load." + err);
     });  
 });
+//Handle GET requests to '/appointment'
+app.get('/appointment', (req, res) => {
+    //Render the 'appointment view
+    res.render('appointment', {
+        title: "Pets-R-Us | Booking",
+        pageTitle: "Booking",
+        services: servicesData
+    });
+});
 
 //Handle POST requests to '/register'
 app.post('/register', async (req, res) => {
@@ -105,13 +118,22 @@ app.post('/register', async (req, res) => {
         //Save the new customer to the database
         await newCustomer.save();
         //Render the register page after successfully registering the user
-        res.render('register', {
-            title: "Pets-R-Us | Register",
-            pageTitle: "Register",
-            successMessage: "Registration successful!"
-        });
+        res.redirect('/register');
     } catch (err) {
         res.status(500).send('Registration failed. ' + err + req.body);
+    }
+});
+//Handle POST requests to '/appointment'
+app.post('/appointment', async (req, res) => {
+    try{
+        //Create a new Appointment using the 'req.body' data
+        const newAppointment = new Appointment(req.body);
+        //Save the appointment
+        await newAppointment.save();
+        //Redirect the user to the same page after successfully booking an appointment
+        res.redirect('/appointment');
+    } catch (err) {
+        res.status(500).send('Booking failed. ' + err + req.body);
     }
 });
 
