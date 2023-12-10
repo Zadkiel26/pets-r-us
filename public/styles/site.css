@@ -51,11 +51,11 @@ ul, .nav-container {
 
 .nav-drop-down  {
     position: absolute;
-    background-color: #222;
+    background-color: #fff;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 2;
     color: black;
-    padding: 10px;
+    padding: 20px;
     display: none;
 }
 
@@ -82,7 +82,7 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 225px;
+    height: 70px;
     top: 0;
     opacity: 0;
     animation: 1s fade-in 0.5s forwards;
@@ -101,7 +101,7 @@ header h2 {
     width: 100%;
     letter-spacing: 2px;
     text-transform: uppercase;
-    font-size: 48px;
+    font-size: 36px;
     text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
 }
 
@@ -109,7 +109,7 @@ header nav {
     display: flex;
     align-items: center;
     justify-content: right;
-    font-size: 22px;
+    font-size: 20px;
     margin-right: 30px;
 }
 
@@ -132,15 +132,12 @@ section {
     color: #fff;
 }
 
-.overview .background-image {
-    position: absolute;
+#background-image {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-image: url("../images/background-image.jpg");
-    background-size: cover;
-    z-index: -1;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/background-image.jpg) no-repeat center center/cover;
 }
 
 .overview h1 {
@@ -178,6 +175,7 @@ section {
 }
 
 .overview-content {
+    position: absolute;
     opacity: 0;
     margin-top: 100px;
     animation: 1s slide-fade 1s forwards;
