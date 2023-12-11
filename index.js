@@ -25,7 +25,7 @@ const app = express();
 //Set the port number to 3000
 const port = process.env.PORT || 3000;
 //Connect to MongoDB
-const CONN = 'mongodb+srv://Zadkiel12:Zakio1226@cluster0.j373lcq.mongodb.net/?retryWrites=true&w=majority';
+const CONN = 'mongodb+srv://Zadkiel12:Zakio1226@cluster0.j373lcq.mongodb.net/web340DB?retryWrites=true&w=majority';
 mongoose.connect(CONN).then(() =>{
     console.log('Connected to MongoDB!');
 }).catch(err => {
@@ -99,9 +99,9 @@ app.get('/customer-list', (req, res) => {
     });  
 });
 //Handle GET requests to '/appointment'
-app.get('/appointment', (req, res) => {
+app.get('/booking', (req, res) => {
     //Render the 'appointment view
-    res.render('appointment', {
+    res.render('booking', {
         title: "Pets-R-Us | Booking",
         pageTitle: "Booking",
         services: servicesData
@@ -124,14 +124,14 @@ app.post('/register', async (req, res) => {
     }
 });
 //Handle POST requests to '/appointment'
-app.post('/appointment', async (req, res) => {
+app.post('/booking', async (req, res) => {
     try{
         //Create a new Appointment using the 'req.body' data
         const newAppointment = new Appointment(req.body);
         //Save the appointment
         await newAppointment.save();
         //Redirect the user to the same page after successfully booking an appointment
-        res.redirect('/appointment');
+        res.redirect('/booking');
     } catch (err) {
         res.status(500).send('Booking failed. ' + err + req.body);
     }
