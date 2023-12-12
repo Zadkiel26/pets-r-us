@@ -11,7 +11,81 @@
 <!-- Header Section -->
 <%- include('./partials/_header.ejs') %>
 
+<section class="my-appointments">
+  <h3 class="title"><%= pageTitle %></h3>
+  <div class="card">
+    <p class="card-title">My Appointments</p>
+    <div class="card-content">
+      <div class="form">
+        <div class="form-field">
+          <label for="email">Enter your email: </label>
+          <input type="email" name="email" id="email" class="input" />
+        </div>
+        <div class="form-field">
+          <input
+            type="submit"
+            value="Search"
+            id="search"
+            class="btn btn-primary full-width"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="appointments"></div>
+</section>
 
+<!-- Script to fetch appointment api and display it in appointments div as a table -->
+<script>
+  //Add onclick event to search button
+  document.getElementById("search").onclick = () => {
+    //Get the email element value
+    const email = document.getElementById("email").value;
 
+    //Fetch the api with the email value
+    fetch(`/api/appointments/${email}`)
+      .then((res) => res.json())
+      .then((data) => {
+        //Define the appointmentDiv
+        let appointmentDiv = `
+            <div class="card">
+                <p class="card-title">Your Appointments</p>
+                <div class="card-content">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>First name</th>
+                                <th>Last name</th>
+                                <th>Email</th>
+                                <th>Service</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+        `;
+
+        //Loop through all the appointments
+        for (let appointment of data) {
+                //Add a table row for each appointment
+                appointmentDiv +=  `
+                    <tr>
+                        <td>${appointment.firstName}</td>
+                        <td>${appointment.lastName}</td>
+                        <td>${appointment.email}</td>
+                        <td>${appointment.service}</td>
+                    </tr>
+                `;
+        }
+        //Close the appointmentDiv
+        appointmentDiv += `
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        `;
+        //Bind the appointmentDiv to the appointments div
+        document.getElementById('appointments').innerHTML = appointmentDiv;
+      });
+  };
+</script>
 <!-- Footer -->
 <%- include('./partials/_footer.ejs') %>

@@ -7,7 +7,6 @@
         https://youtu.be/A01KtJTv1oc
         https://github.com/buwebdev/web-340/tree/master
 */
-
 //Import the Express framework
 const express = require('express');
 //Import the MongoDB framework
@@ -56,7 +55,7 @@ app.get('/grooming', (req, res) => {
     //Render the 'grooming' view
     res.render('grooming', {
         title: "Pets-R-Us | Grooming",
-        pageTitle: "Grooming"
+        pageTitle: "Grooming Info"
     });
 });
 //Handle GET requests to '/boarding'
@@ -64,7 +63,7 @@ app.get('/boarding', (req, res) => {
     //Render the 'boarding' view
     res.render('boarding', {
         title: "Pets-R-Us | Boarding",
-        pageTitle: "Boarding"
+        pageTitle: "Boarding Info"
     });
 });
 //Handle GET requests to '/training'
@@ -80,7 +79,7 @@ app.get('/register', (req, res) => {
     //Render the 'register' view
     res.render('register', {
         title: "Pets-R-Us | Register",
-        pageTitle: "Register"
+        pageTitle: "Registration Form"
     });
 });
 //Handle GET requests to '/customer-list'
@@ -98,14 +97,35 @@ app.get('/customer-list', (req, res) => {
         res.status(500).send("Customer list failed to load." + err);
     });  
 });
-//Handle GET requests to '/appointment'
+//Handle GET requests to '/booking'
 app.get('/booking', (req, res) => {
-    //Render the 'appointment view
+    //Render the 'booking' view
     res.render('booking', {
         title: "Pets-R-Us | Booking",
-        pageTitle: "Booking",
+        pageTitle: "Book your appointment",
         services: servicesData
     });
+});
+//Handle GET requests to '/my-appointments'
+app.get('/my-appointments', (req, res) => {
+    //Render the 'my-appointments' view
+    res.render('my-appointments', {
+        title: "Pets-R-Us | My Appointments",
+        pageTitle: "Appointments Info"
+    });
+});
+//Handel GET requests to '/api/appointments/:email'
+app.get('/api/appointments/:email', async (req, res) => {
+    try {
+        //Get the userEmail from the req.params.email
+        const userEmail = req.params.email;
+        //Find the the appointments with that email
+        const appointments = await Appointment.find({ email: userEmail });
+        //Respond to the client with the found appointment in JSON format
+        res.json(appointments);
+    } catch(err) {
+        res.status(500).json({ error: "Appointment data failed to load.", details: err});
+    }
 });
 
 //Handle POST requests to '/register'
