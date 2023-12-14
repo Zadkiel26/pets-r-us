@@ -49,17 +49,20 @@ ul, .nav-container {
     color: #475999;
 }
 
+.parent-drop-down {
+    position: relative;
+}
+
 .nav-drop-down  {
     position: absolute;
     background-color: #fff;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 2;
     color: black;
     padding: 20px;
     display: none;
 }
 
-.parent-item:hover .nav-drop-down {
+.parent-drop-down:hover .nav-drop-down {
     display: block;
 }
 
@@ -81,6 +84,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
     width: 100%;
     height: 70px;
     top: 0;
@@ -88,6 +92,7 @@ header {
     animation: 1s fade-in 0.5s forwards;
     color: #3498db;
     background-color: rgba(128, 128, 128, 0.1);
+    z-index: 1;
 }
 
 @keyframes fade-in {
